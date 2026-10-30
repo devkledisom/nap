@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NAP Qualin - Núcleo de Apoio Psicopedagógico</title>
+  <!-- Google Fonts & Material Symbols -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Theme Configuration Verbatim -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#a7c9fb",
+            "on-primary-container": "#87a8d9",
+            "text-muted": "#6C757D",
+            "on-primary": "#ffffff",
+            "surface-tint": "#3e608c",
+            "surface-container-high": "#e3e9f0",
+            "surface-white": "#FFFFFF",
+            "surface": "#f7f9ff",
+            "on-primary-fixed-variant": "#244873",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "inverse-primary": "#a7c9fb",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#004625",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474f",
+            "on-tertiary-fixed-variant": "#00522c",
+            "secondary": "#1e6296",
+            "surface-variant": "#dde3eb",
+            "error": "#ba1a1a",
+            "inverse-surface": "#2b3137",
+            "tertiary-fixed": "#88f9b0",
+            "on-tertiary-fixed": "#00210f",
+            "surface-container": "#e9eef6",
+            "on-background": "#161c22",
+            "sage-soft": "#E6F4EA",
+            "tertiary": "#002d16",
+            "primary": "#00274b",
+            "inverse-on-surface": "#ecf1f9",
+            "outline": "#73777f",
+            "secondary-fixed-dim": "#98cbff",
+            "secondary-fixed": "#cfe5ff",
+            "surface-bright": "#f7f9ff",
+            "on-error-container": "#93000a",
+            "secondary-container": "#8cc6ff",
+            "surface-tint-blue": "#EAF2F8",
+            "on-tertiary-container": "#48bb78",
+            "surface-container-low": "#eff4fc",
+            "primary-fixed": "#d4e3ff",
+            "on-secondary-fixed-variant": "#004a77",
+            "background": "#f7f9ff",
+            "surface-container-highest": "#dde3eb",
+            "on-secondary-container": "#005284",
+            "on-surface": "#161c22",
+            "on-primary-fixed": "#001c39",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#6bdc96",
+            "surface-dim": "#d5dae2",
+            "primary-container": "#173d67",
+            "outline-variant": "#c3c6d0",
+            "on-secondary-fixed": "#001d33",
+            "border-subtle": "#DCE6F1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "2rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.375rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-xl": "3rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "label-sm": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.02em", fontWeight: "500" }],
+            "headline-md": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg-mobile": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "label-md": ["0.8125rem", { lineHeight: "1.125rem", letterSpacing: "0.01em", fontWeight: "500" }],
+            "label-lg": ["0.9375rem", { lineHeight: "1.25rem", fontWeight: "600" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.375rem", fontWeight: "400" }],
+            "headline-lg": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "display-lg": ["3.25rem", { lineHeight: "3.75rem", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-sm": ["1.25rem", { lineHeight: "1.75rem", fontWeight: "600" }],
+            "body-md": ["1rem", { lineHeight: "1.625rem", fontWeight: "400" }],
+            "body-lg": ["1.125rem", { lineHeight: "1.75rem", fontWeight: "400" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .ambient-card {
+      box-shadow: 0 4px 20px -2px rgba(23, 61, 103, 0.06), 0 2px 6px -1px rgba(23, 61, 103, 0.04);
+    }
+
+    .ambient-card:hover {
+      box-shadow: 0 12px 28px -4px rgba(23, 61, 103, 0.1), 0 4px 10px -2px rgba(23, 61, 103, 0.05);
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
+  <!-- 1. Cabeçalho (Header / TopNavBar) -->
+  <header
+    class="sticky top-0 z-50 bg-surface-white dark:bg-surface-container-lowest shadow-sm border-b border-border-subtle dark:border-outline-variant transition-all">
+    <div class="flex justify-between items-center w-full px-gutter md:px-margin max-w-7xl mx-auto h-20">
+      <!-- Logo da Faculdade e do NAP -->
+      <a class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-secondary rounded-lg p-1"
+        href="#inicio">
+        <div
+          class="w-11 h-11 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm group-hover:bg-secondary transition-colors">
+          <span class="material-symbols-outlined text-2xl font-bold"
+            data-icon="health_and_safety">health_and_safety</span>
+        </div>
+        <div class="flex flex-col text-left">
+          <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">Qualin
+            Faculdade de Saúde</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Núcleo de Apoio Psicopedagógico
+            — NAP</span>
+        </div>
+      </a>
+      <!-- Menu de Navegação Desktop -->
+      <nav aria-label="Navegação Principal" class="hidden md:flex items-center gap-8">
+        <a class="text-primary dark:text-primary-fixed font-semibold border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-lg text-label-lg transition-colors"
+          href="#inicio">Início</a>
+        <a class="text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-lg text-label-lg"
+          href="#conheca">Conheça o NAP</a>
+        <a class="text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-lg text-label-lg"
+          href="#como-ajudamos">Como podemos ajudar</a>
+        <a class="text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-lg text-label-lg"
+          href="#faq">Dúvidas frequentes</a>
+      </nav>
+      <!-- Botão de Destaque à Direita -->
+      <div class="flex items-center gap-3">
+        <a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-space-sm rounded-lg hover:bg-secondary transition-all duration-200 active:scale-95 shadow-sm border border-transparent"
+          href="https://forms.gle/P2vY9ayBWQE619oQ8" rel="noopener noreferrer" target="_blank"><span class="">Solicitar
+            apoio</span><span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span></a>
+      </div>
+    </div>
+  </header>
+  <main id="inicio">
+    <!-- 2. Seção Hero (Banner Principal) -->
+    <section
+      class="relative overflow-hidden pt-12 pb-20 md:py-24 bg-gradient-to-b from-surface-white via-surface-tint-blue/30 to-surface border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-gutter md:px-margin">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Lado Esquerdo -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            <!-- Badge Sutil -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full font-label-md text-label-md shadow-xs"
+              style="background-color: rgba(255, 144, 158, 0.15); border: 1px solid rgba(255, 144, 158, 0.4); color: rgb(201, 54, 75);">
+              <span class="material-symbols-outlined text-base" style="color: #e8586c;" data-icon="spa">spa</span><span
+                class="">Acolhimento &amp; Suporte ao Estudante</span></div>
+            <!-- Título Principal -->
+            <h1 class="font-display-lg text-display-lg text-primary leading-tight tracking-tight">
+              Sua jornada acadêmica importa. <span class="font-display-lg font-bold"
+                style="color: rgb(216, 69, 88);">Você não precisa caminhar sozinho.</span>
+            </h1>
+            <!-- Texto de Apoio -->
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              O Núcleo de Apoio Psicopedagógico (NAP) é um espaço de acolhimento, orientação e apoio à comunidade
+              acadêmica, contribuindo para o bem-estar, a aprendizagem e o desenvolvimento dos estudantes.
+            </p>
+            <!-- Ações e Suporte -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full pt-2">
+              <a class="inline-flex items-center justify-center gap-3 bg-primary-container text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-200 shadow-md active:scale-95 group"
+                href="https://forms.gle/P2vY9ayBWQE619oQ8" rel="noopener noreferrer" target="_blank"><span
+                  class="">Solicitar apoio ao NAP</span><span
+                  class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"
+                  data-icon="arrow_forward">arrow_forward</span></a>
+            </div>
+            <!-- Texto Auxiliar Discreto -->
+            <p class="font-label-sm text-label-sm text-text-muted flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-text-muted" data-icon="info">info</span>
+              Preencha o formulário institucional para registrar sua solicitação.
+            </p>
+            <!-- Citação Reflexiva e Motivadora -->
+            <div class="w-full mt-6 pt-6 border-t border-border-subtle/80">
+              <blockquote class="italic font-body-md text-body-md text-primary-container/85 pl-4 py-1.5 rounded-r-lg"
+                style="border-left: 4px solid rgb(255, 144, 158); background-color: rgba(255, 144, 158, 0.08);">
+                “Aprender, desenvolver-se e superar desafios também fazem parte da vida universitária.”</blockquote>
+            </div>
+          </div>
+          <!-- Lado Direito: Composição Visual Acolhedora -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Glow Suave Traseiro -->
+              <div
+                class="absolute -inset-2 bg-gradient-to-tr from-secondary-fixed-dim/30 to-tertiary-fixed/20 rounded-3xl blur-2xl -z-10">
+              </div>
+              <!-- Card Principal Estilizado -->
+              <div
+                class="bg-surface-white rounded-2xl border border-border-subtle p-6 ambient-card relative overflow-hidden">
+                <div
+                  class="relative h-64 md:h-72 w-full rounded-xl overflow-hidden mb-6 border border-border-subtle/60">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Professional and warm psychological or counseling support session in a serene university clinic setting with a counselor and student conversing."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCngLKwdTVem0nugSxC2HzaoKNudbHQNXaF939iuTujSeVjmJmYUc-wxU0Rj8KhMT6VifRWj4a6Jg5rjqzOjYe-NutHG2CLg_6tkKqJnaIxlQ6E7HBNnFsKJCmCWGdWxgA2Ip1-0pF26MAcUOV-3hNUPwqVMC2IHBXjgARY5C9_ngn6Xi8Mn_kgnY-uQNbmvHwlhayPfaOlJHYvZFYcEW2hxoxfXA0-uHmPpl9p1aA"
+                    alt="Professional and warm psychological counseling support session with a counselor and a university student.">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-4">
+                    <div
+                      class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full font-label-md text-label-md shadow-xs"
+                      style="background-color: rgba(255, 144, 158, 0.15); border: 1px solid rgba(255, 144, 158, 0.4); color: rgb(201, 54, 75);">
+                      <span class="material-symbols-outlined text-base" style="color: #e8586c;"
+                        data-icon="spa">spa</span><span class="">Acolhimento &amp; Suporte ao Estudante</span></div>
+                  </div>
+                </div>
+                <!-- Detalhe da Dinâmica do NAP -->
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="font-headline-sm text-headline-sm text-primary font-semibold">Atendimento
+                      Humanizado</span>
+                    <span
+                      class="font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold flex items-center gap-1"
+                      style="background-color: rgba(255, 144, 158, 0.18); color: rgb(183, 40, 61); border: 1px solid rgba(255, 144, 158, 0.35);"><span
+                        class="w-1.5 h-1.5 rounded-full" style="background-color: #FF909E;"></span>Ativo</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Suporte individualizado focado no estudante universitário, respeitando seu ritmo e trajetórias
+                    singulares na faculdade.
+                  </p>
+                  <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle/70">
+                      <div class="font-headline-sm text-headline-sm text-secondary font-bold">100%</div>
+                      <div class="font-label-sm text-label-sm text-on-surface-variant">Gratuito &amp; Institucional
+                      </div>
+                    </div>
+                    <div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle/70">
+                      <div class="font-headline-sm text-headline-sm text-secondary font-bold">Sigiloso</div>
+                      <div class="font-label-sm text-label-sm text-on-surface-variant">Ética &amp; Privacidade</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mini Card Flutuante -->
+              <div
+                class="hidden sm:flex absolute -bottom-5 -left-6 bg-surface-white border border-border-subtle rounded-xl p-3.5 ambient-card items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-sage-soft flex items-center justify-center text-tertiary-container">
+                  <span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                </div>
+                <div>
+                  <div class="font-label-md text-label-md font-semibold text-primary">Psicopedagogia Clínica</div>
+                  <div class="font-label-sm text-label-sm text-text-muted">Apoio a métodos e rotinas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3. Seção "Conheça o NAP" -->
+    <section class="py-20 bg-surface-white border-b border-border-subtle scroll-mt-20" id="conheca">
+      <div class="max-w-7xl mx-auto px-gutter md:px-margin">
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+          <div
+            class="inline-flex items-center gap-1.5 bg-surface-container-low border border-border-subtle px-3 py-1 rounded-full text-secondary font-label-md text-label-md">
+            <span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+            <span class="">Institucional</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">O que é o NAP?</h2>
+          <div class="w-12 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <!-- Texto Explicativo em Destaque Tipográfico -->
+          <div
+            class="bg-surface-tint-blue/50 rounded-2xl p-8 md:p-10 border border-border-subtle ambient-card text-center mb-12">
+            <p class="font-body-lg text-body-lg text-on-surface font-normal leading-relaxed md:text-xl">
+              O Núcleo de Apoio Psicopedagógico é um setor da faculdade dedicado a apoiar a comunidade acadêmica diante
+              de dificuldades relacionadas à aprendizagem, à adaptação à vida universitária e à organização dos estudos.
+              Por meio de orientações e ações educativas, o NAP busca contribuir para uma experiência acadêmica mais
+              saudável, inclusiva e bem-sucedida.
+            </p>
+          </div>
+          <!-- Pilares Estruturais em Badges / Cartões -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              class="bg-surface-white border border-border-subtle rounded-xl p-5 text-center flex flex-col items-center space-y-3 ambient-card transition-transform hover:-translate-y-0.5">
+              <div class="w-12 h-12 rounded-xl bg-surface-tint-blue text-secondary flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl" data-icon="hearing">hearing</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary text-base font-semibold">Escuta Ativa</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Acolhimento empático e livre de julgamentos
+                às demandas estudantis.</p>
+            </div>
+            <div
+              class="bg-surface-white border border-border-subtle rounded-xl p-5 text-center flex flex-col items-center space-y-3 ambient-card transition-transform hover:-translate-y-0.5">
+              <div class="w-12 h-12 rounded-xl bg-surface-tint-blue text-secondary flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl" data-icon="menu_book">menu_book</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary text-base font-semibold">Aprendizagem
+                Estratégica</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Desenvolvimento de autonomia intelectual e
+                métodos de estudo eficientes.</p>
+            </div>
+            <div
+              class="bg-surface-white border border-border-subtle rounded-xl p-5 text-center flex flex-col items-center space-y-3 ambient-card transition-transform hover:-translate-y-0.5">
+              <div class="w-12 h-12 rounded-xl bg-surface-tint-blue text-secondary flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl" data-icon="diversity_3">diversity_3</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary text-base font-semibold">Respeito à Diversidade
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Inclusão integral, acolhendo as
+                particularidades de cada aluno.</p>
+            </div>
+            <div
+              class="bg-surface-white border border-border-subtle rounded-xl p-5 text-center flex flex-col items-center space-y-3 ambient-card transition-transform hover:-translate-y-0.5">
+              <div class="w-12 h-12 rounded-xl bg-sage-soft text-tertiary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl" data-icon="lock">lock</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary text-base font-semibold">Confidencialidade</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Garantia absoluta de sigilo e rigoroso
+                respeito à privacidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 4. Seção "Como podemos ajudar?" -->
+    <section class="py-20 bg-surface-container-low border-b border-border-subtle scroll-mt-20" id="como-ajudamos">
+      <div class="max-w-7xl mx-auto px-gutter md:px-margin">
+        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <div
+            class="inline-flex items-center gap-1.5 bg-surface-white border border-border-subtle px-3 py-1 rounded-full text-secondary font-label-md text-label-md">
+            <span class="material-symbols-outlined text-sm" data-icon="stars">stars</span>
+            <span class="">Áreas de Atuação</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Como o NAP pode ajudar você?</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Conheça as principais frentes de atuação
+            psicopedagógica à sua disposição.</p>
+        </div>
+        <!-- Grade de 4 Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-surface-white rounded-2xl border border-border-subtle p-6 ambient-card flex flex-col justify-between transition-all duration-200 hover:-translate-y-1">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-surface-tint-blue text-primary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl" data-icon="schedule">schedule</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Orientação de estudos</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Estratégias para organizar a rotina acadêmica, administrar o tempo e desenvolver hábitos de estudo.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-border-subtle flex items-center text-secondary font-label-md text-label-md font-semibold gap-1">
+              <span class="">Organização &amp; Tempo</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-surface-white rounded-2xl border border-border-subtle p-6 ambient-card flex flex-col justify-between transition-all duration-200 hover:-translate-y-1">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-surface-tint-blue text-primary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl" data-icon="insights">insights</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Acompanhamento da aprendizagem</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Orientações para identificar dificuldades acadêmicas e buscar caminhos para melhorar o desempenho nos
+                estudos.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-border-subtle flex items-center text-secondary font-label-md text-label-md font-semibold gap-1">
+              <span class="">Desempenho Acadêmico</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-surface-white rounded-2xl border border-border-subtle p-6 ambient-card flex flex-col justify-between transition-all duration-200 hover:-translate-y-1">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-surface-tint-blue text-primary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl" data-icon="support_agent">support_agent</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Acolhimento e orientação</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Um espaço para apresentar suas dificuldades e receber orientações sobre os recursos de apoio disponíveis
+                na instituição.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-border-subtle flex items-center text-secondary font-label-md text-label-md font-semibold gap-1">
+              <span class="">Espaço de Escuta</span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-surface-white rounded-2xl border border-border-subtle p-6 ambient-card flex flex-col justify-between transition-all duration-200 hover:-translate-y-1">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-surface-tint-blue text-primary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl" data-icon="hub">hub</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Inclusão e integração acadêmica</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Ações que contribuem para a adaptação à faculdade, a inclusão educacional e a convivência respeitosa.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-border-subtle flex items-center text-secondary font-label-md text-label-md font-semibold gap-1">
+              <span class="">Adaptação &amp; Comunidade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 5. Seção "Como solicitar apoio?" -->
+    <section class="py-20 bg-surface-white border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-gutter md:px-margin">
+        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <div
+            class="inline-flex items-center gap-1.5 bg-surface-tint-blue border border-border-subtle px-3 py-1 rounded-full text-secondary font-label-md text-label-md">
+            <span class="material-symbols-outlined text-sm" data-icon="route">route</span>
+            <span class="">Fluxo Transparente</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Precisa de apoio? Veja como começar.
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Siga o passo a passo simplificado para iniciar o
+            seu atendimento.</p>
+        </div>
+        <!-- 3 Passos Numerados -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative max-w-5xl mx-auto mb-16">
+          <!-- Passo 1 -->
+          <div
+            class="relative bg-surface rounded-2xl border border-border-subtle p-8 ambient-card flex flex-col text-left">
+            <div
+              class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-6">
+              1
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">1. Acesse o formulário</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Clique no botão para abrir o Google Forms institucional.
+            </p>
+          </div>
+          <!-- Passo 2 -->
+          <div
+            class="relative bg-surface rounded-2xl border border-border-subtle p-8 ambient-card flex flex-col text-left">
+            <div
+              class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-6">
+              2
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">2. Informe sua solicitação</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Preencha as informações solicitadas no formulário para que a equipe possa compreender sua necessidade.
+            </p>
+          </div>
+          <!-- Passo 3 -->
+          <div
+            class="relative bg-surface rounded-2xl border border-border-subtle p-8 ambient-card flex flex-col text-left">
+            <div
+              class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-6">
+              3
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">3. Aguarde o contato da instituição</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              A equipe responsável poderá avaliar a solicitação e orientar você sobre os próximos passos, conforme os
+              procedimentos institucionais.
+            </p>
+          </div>
+        </div>
+        <!-- Chamada para Ação Centralizada -->
+        <div class="text-center">
+          <a class="inline-flex items-center gap-3 bg-primary-container text-on-primary font-label-lg text-label-lg px-9 py-4 rounded-lg hover:bg-secondary transition-all duration-200 shadow-md active:scale-95 group"
+            href="https://forms.gle/P2vY9ayBWQE619oQ8" rel="noopener noreferrer" target="_blank"><span class="">Acessar
+              formulário do NAP</span><span
+              class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"
+              data-icon="open_in_new">open_in_new</span></a>
+          <p class="mt-3 font-label-sm text-label-sm text-text-muted">Abertura em nova aba segura via Google Forms
+            Institucional Qualin</p>
+        </div>
+      </div>
+    </section>
+    <!-- 6. Seção "Informação importante" -->
+    <section class="py-14 bg-surface-container-low border-b border-border-subtle">
+      <div class="max-w-5xl mx-auto px-gutter md:px-margin">
+        <div
+          class="bg-sage-soft/70 border border-on-tertiary-container/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm">
+          <div
+            class="w-14 h-14 rounded-2xl bg-surface-white text-tertiary-container flex items-center justify-center shrink-0 border border-on-tertiary-container/20 shadow-xs">
+            <span class="material-symbols-outlined text-3xl" data-icon="verified_user">verified_user</span>
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-headline-sm text-headline-sm text-tertiary-container font-semibold">
+              O NAP é um espaço de orientação e apoio.
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              O NAP atua na orientação psicopedagógica, na prevenção de dificuldades acadêmicas e na promoção do
+              bem-estar no ambiente universitário. Seu atendimento não substitui psicoterapia, avaliação clínica ou
+              tratamento médico. Quando necessário, o estudante poderá receber orientação para buscar serviços
+              especializados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 7. Seção "Dúvidas frequentes" (FAQ com Acordeão Interativo) -->
+    <section class="py-20 bg-surface-white border-b border-border-subtle scroll-mt-20" id="faq">
+      <div class="max-w-4xl mx-auto px-gutter md:px-margin">
+        <div class="text-center space-y-3 mb-14">
+          <div
+            class="inline-flex items-center gap-1.5 bg-surface-tint-blue border border-border-subtle px-3 py-1 rounded-full text-secondary font-label-md text-label-md">
+            <span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+            <span class="">Perguntas Comuns</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Dúvidas frequentes</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Esclareça suas dúvidas e não hesite em entrar em
+            contato para receber apoio.</p>
+        </div>
+        <!-- Acordeão Interativo via details/summary -->
+        <div class="space-y-4">
+          <!-- Q1 -->
+          <details
+            class="group bg-surface rounded-xl border border-border-subtle transition-all duration-200 overflow-hidden open:bg-surface-tint-blue/20">
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer font-headline-sm text-headline-sm text-primary text-base font-semibold list-none select-none">
+              <span class="">O atendimento do NAP é destinado a quem?</span>
+              <span
+                class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180"
+                data-icon="expand_more">expand_more</span>
+            </summary>
+            <div
+              class="px-5 pb-5 text-on-surface-variant font-body-md text-body-md border-t border-border-subtle/50 pt-3">
+              O NAP é voltado à comunidade acadêmica, conforme os serviços e os critérios de atendimento definidos pela
+              faculdade.
+            </div>
+          </details>
+          <!-- Q2 -->
+          <details
+            class="group bg-surface rounded-xl border border-border-subtle transition-all duration-200 overflow-hidden open:bg-surface-tint-blue/20">
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer font-headline-sm text-headline-sm text-primary text-base font-semibold list-none select-none">
+              <span class="">Preciso estar com dificuldades graves para procurar o NAP?</span>
+              <span
+                class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180"
+                data-icon="expand_more">expand_more</span>
+            </summary>
+            <div
+              class="px-5 pb-5 text-on-surface-variant font-body-md text-body-md border-t border-border-subtle/50 pt-3">
+              Não. Você pode buscar orientação quando perceber dificuldades na organização dos estudos, na adaptação à
+              faculdade ou em outros aspectos da sua trajetória acadêmica.
+            </div>
+          </details>
+          <!-- Q3 -->
+          <details
+            class="group bg-surface rounded-xl border border-border-subtle transition-all duration-200 overflow-hidden open:bg-surface-tint-blue/20">
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer font-headline-sm text-headline-sm text-primary text-base font-semibold list-none select-none">
+              <span class="">O NAP realiza psicoterapia?</span>
+              <span
+                class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180"
+                data-icon="expand_more">expand_more</span>
+            </summary>
+            <div
+              class="px-5 pb-5 text-on-surface-variant font-body-md text-body-md border-t border-border-subtle/50 pt-3">
+              Não. O foco do NAP é a orientação psicopedagógica e o apoio acadêmico. Quando necessário, podem ser
+              indicados serviços especializados.
+            </div>
+          </details>
+          <!-- Q4 -->
+          <details
+            class="group bg-surface rounded-xl border border-border-subtle transition-all duration-200 overflow-hidden open:bg-surface-tint-blue/20">
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer font-headline-sm text-headline-sm text-primary text-base font-semibold list-none select-none">
+              <span class="">Como faço para solicitar apoio?</span>
+              <span
+                class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180"
+                data-icon="expand_more">expand_more</span>
+            </summary>
+            <div
+              class="px-5 pb-5 text-on-surface-variant font-body-md text-body-md border-t border-border-subtle/50 pt-3">
+              Clique em um dos botões de solicitação disponíveis nesta página e preencha o Google Forms institucional.
+            </div>
+          </details>
+          <!-- Q5 -->
+          <details
+            class="group bg-surface rounded-xl border border-border-subtle transition-all duration-200 overflow-hidden open:bg-surface-tint-blue/20">
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer font-headline-sm text-headline-sm text-primary text-base font-semibold list-none select-none">
+              <span class="">Meus dados serão tratados com privacidade?</span>
+              <span
+                class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180"
+                data-icon="expand_more">expand_more</span>
+            </summary>
+            <div
+              class="px-5 pb-5 text-on-surface-variant font-body-md text-body-md border-t border-border-subtle/50 pt-3">
+              As informações fornecidas devem ser tratadas conforme as políticas institucionais e a legislação aplicável
+              de proteção de dados. Consulte o aviso de privacidade do formulário para obter mais informações.
+            </div>
+          </details>
+        </div>
+        <!-- Banner de Suporte Auxiliar -->
+        <div
+          class="mt-12 p-6 rounded-2xl bg-surface-container-low border border-border-subtle text-center flex flex-col items-center justify-center space-y-3">
+          <p class="font-body-md text-body-md text-on-surface">Ainda restou alguma dúvida específica sobre o
+            funcionamento?</p>
+          <a class="inline-flex items-center gap-2 text-primary font-label-lg text-label-lg hover:text-secondary underline underline-offset-4"
+            href="https://forms.gle/P2vY9ayBWQE619oQ8" rel="noopener noreferrer" target="_blank">
+            <span class="">Preencha nosso formulário de contato e orientação</span>
+            <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- 8. Rodapé Institucional (Footer) -->
+  <footer class="bg-primary text-on-primary border-t border-border-subtle dark:border-outline-variant">
+    <div class="w-full px-gutter md:px-margin py-space-xl max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start pb-12 border-b border-primary-container">
+        <!-- Logo e Identificação -->
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-surface-white text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl" data-icon="health_and_safety">health_and_safety</span>
+            </div>
+            <div>
+              <div class="font-headline-sm text-headline-sm font-bold text-surface-white">Qualin Faculdade de Saúde
+              </div>
+              <div class="font-label-sm text-label-sm text-primary-fixed-dim">Núcleo de Apoio Psicopedagógico — NAP
+              </div>
+            </div>
+          </div>
+          <!-- Frase de Valor Institucional -->
+          <p class="font-body-md text-body-md text-primary-fixed-dim max-w-md italic pt-2">
+            “Cuidar da aprendizagem também é cuidar de quem aprende.”
+          </p>
+        </div>
+        <!-- Links Institucionais Configuráveis -->
+        <div class="md:col-span-6 flex flex-col md:items-end justify-between space-y-4">
+          <div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end text-sm">
+            <a class="text-primary-fixed-dim hover:text-surface-white transition-colors duration-150 font-label-md text-label-md"
+              href="#">Site Oficial da Qualin</a>
+            <a class="text-primary-fixed-dim hover:text-surface-white transition-colors duration-150 font-label-md text-label-md"
+              href="#">Política de Privacidade</a>
+            <a class="text-primary-fixed-dim hover:text-surface-white transition-colors duration-150 font-label-md text-label-md"
+              href="#">Regulamento Acadêmico</a>
+          </div>
+          <div class="pt-4">
+            <a class="inline-flex items-center gap-2 bg-secondary text-surface-white px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+              href="https://forms.gle/P2vY9ayBWQE619oQ8" rel="noopener noreferrer" target="_blank">
+              <span class="">Acessar formulário institucional</span>
+              <span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Direitos Autorais -->
+      <div
+        class="pt-8 flex flex-col sm:flex-row justify-between items-center text-primary-fixed-dim font-label-sm text-label-sm gap-4">
+        <div class="">
+          © 2025 Qualin Faculdade de Saúde. Todos os direitos reservados.
+        </div>
+        <div class="text-primary-fixed-dim/80 text-xs">
+          Qualin Faculdade de Saúde - Núcleo de Apoio Psicopedagógico (NAP)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
